@@ -1,4 +1,4 @@
-var lipsum = import('./lipsum');
+var lipsum = require('./lipsum');
 
 var SENTENCES_IN_PARA = 5;
 var sentenceLength = Math.random() * (15 - 3) + 3;
