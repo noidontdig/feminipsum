@@ -1,13 +1,13 @@
-const SENTENCES_IN_PARA = 5;
+var lipsum = import('./lipsum');
 
+var SENTENCES_IN_PARA = 5;
 var sentenceLength = Math.random() * (15 - 3) + 3;
 var ratio = Math.random() * (3 - 1) + 1;
 
-var loremIpsum= [];
-
+var loremIpsum= lipsum.lipsum;
 var feministWords= [];
 
-generateFeminipsum(n) {
+function generateFeminipsum(n) {
     var text;
     _.each(n, function() {
         text += generateParagraph();
@@ -16,16 +16,16 @@ generateFeminipsum(n) {
     return text;
 }
 
-generateParagraph() {
+function generateParagraph() {
     var paragraph;
     _.each(SENTENCES_IN_PARA, function() {
-        paragraph += generateSentence() + "\n";
+        paragraph += generateSentence() + "\n\n";
     });
 
     return paragraph;
 }
 
-generateSentence() {
+function generateSentence() {
     var loremWordsArray = _.sample(loremIpsum, sentenceLength);
     var femWordsArray = _.sample(feministWords, sentenceLength);
 
