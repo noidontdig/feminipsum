@@ -1,5 +1,4 @@
-exports.lipsum = function() {
-    return ['Lorem',
+var lipsum = ['Lorem',
       'ipsum',
       'dolor',
       'sit',
@@ -401,5 +400,4 @@ exports.lipsum = function() {
       'egestas',
       'ornare',
       'augue'
-    ];
-};
+];
